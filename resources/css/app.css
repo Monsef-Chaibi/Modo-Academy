@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a,a:hover,a:focus,a:active{
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.hero{
+    background-image: url('../views/images/pexels-vlada-karpovich-4050320.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 73vh;
+}
+
+.hero-2{
+    background-image: url('../views/images/987256.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 78vh;
+}
+
+.hero-3{
+  background-image: url('../views/images/pexels-fox-1595385.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 78vh;
+}
+
+
+.hero-4{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 78vh;
+}
+
+.hero-5{
+  background-image: url('../views/images/pexels-karolina-grabowska-5632402.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 78vh;
+}
+
+@keyframes slideIn {
+  to {
+    right: 0;
+  }
+}
+
+.btn-active{
+  background-color: #10B981;
+}
+
+
+.sidebar.active {
+  animation: slideIn .5s  forwards;
+}
+
+
+
+body {
+  background-color: #222;
+  color: #eaeaea;
+  font-family: sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.splide__optional-button-container {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.splide__slide {
+  min-height: 200px;
+  text-align: center;
+}
+
+
+/*
+lest add a base input style
+*/
+
+
+
+
+
+

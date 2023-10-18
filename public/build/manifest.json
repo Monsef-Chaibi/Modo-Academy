@@ -1,0 +1,41 @@
+{
+  "resources/js/app.css": {
+    "file": "assets/app-f49f4b9b.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/pexels-vlada-karpovich-4050320-5125d8a2.jpg",
+      "assets/987256-cfa4bad3.png",
+      "assets/pexels-fox-1595385-b96b877a.jpg",
+      "assets/pexels-karolina-grabowska-5632402-c56320b5.jpg"
+    ],
+    "css": [
+      "assets/app-f49f4b9b.css"
+    ],
+    "file": "assets/app-5c5b5477.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-fabb6531.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  },
+  "resources/views/images/987256.png": {
+    "file": "assets/987256-cfa4bad3.png",
+    "src": "resources/views/images/987256.png"
+  },
+  "resources/views/images/pexels-fox-1595385.jpg": {
+    "file": "assets/pexels-fox-1595385-b96b877a.jpg",
+    "src": "resources/views/images/pexels-fox-1595385.jpg"
+  },
+  "resources/views/images/pexels-karolina-grabowska-5632402.jpg": {
+    "file": "assets/pexels-karolina-grabowska-5632402-c56320b5.jpg",
+    "src": "resources/views/images/pexels-karolina-grabowska-5632402.jpg"
+  },
+  "resources/views/images/pexels-vlada-karpovich-4050320.jpg": {
+    "file": "assets/pexels-vlada-karpovich-4050320-5125d8a2.jpg",
+    "src": "resources/views/images/pexels-vlada-karpovich-4050320.jpg"
+  }
+}

@@ -1,0 +1,15 @@
+https://www.pioneersacademy.com/
+
+
+//
+https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/
+
+
+
+// @vite('resources/css/app.css')
+
+// Fix vite in Host
+
+<link rel="stylesheet" href="{{asset('build/assets/app-fabb6531.css')}}">
+<link rel="stylesheet" href="{{asset('build/assets/app-f49f4b9b.css')}}">
+<script type="module" scr="{{asset('build/assets/app-5c5b5477.js')}}"></script>
