@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 Route::get('/', function () {
+    session('local')=='en';
     return redirect('/HomePage');
 });
 Route::get('/verify', function () {
@@ -48,6 +49,7 @@ Route::get('/RemoveFromCart/{id}', [App\Http\Controllers\Controller::class, 'Rem
 
 
 Route::get('/lang/{local}', function($local){
+
     if(in_array($local,['ar','en'])){
         session()->put('local',$local);
     }
