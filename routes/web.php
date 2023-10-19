@@ -57,3 +57,5 @@ Route::get('/lang/{local}', function($local){
 })->name('lang');
 
 
+Route::get('Stripe', [App\Http\Controllers\StripeController::class, 'Stripe'])->name('Stripe');
+Route::post('StripePost', [App\Http\Controllers\StripeController::class, 'StripePost'])->name('StripePost');

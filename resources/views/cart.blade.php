@@ -202,7 +202,7 @@
             >
             {{ __('msg.ct10') }}<span class="text-blue-600"> {{$some}} </span>  {{ __('msg.in2') }}
             </p>
-            <a href="https://poynt.godaddy.com/checkout/78d0e35b-1eb1-4e1b-8389-aa9f2c238df0/mubtaker"
+            <a href="/Stripe"
             class=' mt-3 text-white min-w-[20rem] bg-blue-800 rounded-md px-3 py-2'
             >
             {{ __('msg.ct11') }}

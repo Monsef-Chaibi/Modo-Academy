@@ -6,6 +6,7 @@ use App\Models\recordcourses;
 use App\Models\Livecourses;
 use App\Models\Allrecord;
 use App\Models\desccourse;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
