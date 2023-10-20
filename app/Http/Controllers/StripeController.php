@@ -11,13 +11,23 @@ class StripeController extends Controller
         return view('stripe');
     }
     public function StripePost(Request $request){
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        Stripe\Charge::create([
-            'amount' => 100*100,
-            'currency'=>"usd",
-            'source'=> $request->stripeToken,
-            'description' =>'Test payment from muhammed essa'
-        ]);
+        \Stripe\Stripe::setApiKey(env('STIPE_SECRET'));
+        $session =  \Stripe\Checkout/Session::create([
+            'line_items' => [[
+              'price_data' => [
+                'currency' => 'usd',
+                'product_data' => [
+                  'name' => 'T-shirt',
+                ],
+                'unit_amount' => 2000,
+              ],
+              'quantity' => 1,
+            ]],
+            'mode' => 'payment',
+            'success_url' => 'http://localhost:4242/success',
+            'cancel_url' => 'http://localhost:4242/cancel',
+          ]);
+
 
         return back();
     }

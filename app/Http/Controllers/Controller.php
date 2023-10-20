@@ -168,4 +168,34 @@ class Controller extends BaseController
         return redirect()->back();
     }
 
+
+
+    public function StripePost(){
+        $some=Addtocart::where('userid',auth()->user()->id)->sum('price');
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $session = \Stripe\Checkout\Session::create([
+            'line_items'  => [
+                [
+                    'price_data' => [
+                        'currency'     => 'USD',
+                        'product_data' => [
+                            "name" => auth()->user()->name,
+                        ],
+                        'unit_amount'  =>  $some * 100,
+                    ],
+                    'quantity'   => 1,
+                ],
+
+            ],
+            'mode'        => 'payment',
+            'success_url' => route('Success'),
+            'cancel_url' =>  route('Cancel'),
+
+        ]);
+
+        return redirect()->away($session->url);
+    }
+    public function success(){
+        return view('success');
+    }
 }

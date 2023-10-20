@@ -6,6 +6,7 @@
         'name'=>'Name',
         'phone'=>'Phone Number',
         'login'=>'Login',
+        'forgot'=>'forgot the password',
         'loginnav'=>'Login',
         'register'=>'Register',
         'logout'=>'Log out',

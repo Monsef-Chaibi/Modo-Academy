@@ -202,11 +202,14 @@
             >
             {{ __('msg.ct10') }}<span class="text-blue-600"> {{$some}} </span>  {{ __('msg.in2') }}
             </p>
-            <a href="/Stripe"
-            class=' mt-3 text-white min-w-[20rem] bg-blue-800 rounded-md px-3 py-2'
-            >
-            {{ __('msg.ct11') }}
-            </a>
+            <form action="/StripePost" method="POST">
+                @csrf
+                <button type="submit"
+                class=' mt-3 text-white min-w-[20rem] bg-blue-800 rounded-md px-3 py-2'
+                >
+                {{ __('msg.ct11') }}
+            </button>
+        </form>
         </div>
         @include('footer')
 <script>

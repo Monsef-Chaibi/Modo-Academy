@@ -57,5 +57,8 @@ Route::get('/lang/{local}', function($local){
 })->name('lang');
 
 
-Route::get('Stripe', [App\Http\Controllers\StripeController::class, 'Stripe'])->name('Stripe');
-Route::post('StripePost', [App\Http\Controllers\StripeController::class, 'StripePost'])->name('StripePost');
+Route::get('/Success', [App\Http\Controllers\Controller::class, 'success'])->name('Success');
+Route::get('/Cancel', function(){
+   return redirect()->back();
+})->name('Cancel');
+Route::post('/StripePost', [App\Http\Controllers\Controller::class, 'StripePost'])->name('StripePost')->middleware(['auth']);;

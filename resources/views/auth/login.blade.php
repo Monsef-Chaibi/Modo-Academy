@@ -22,7 +22,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-{{$st}}">{{ __('msg.email') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" style="    border: 2px solid blue; border-radius: 10px;" type="email" class=" py-2 px-4 rounded-md border-slate-400 focus:border-emerald-500 border-[1.4px] focus:outline-none @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" placeholder="{{ __('msg.email') }}" style="    border: 2px solid blue; border-radius: 10px;" type="email" class=" py-2 px-4 rounded-md border-slate-400 focus:border-emerald-500 border-[1.4px] focus:outline-none @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -36,7 +36,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-{{$st}}">{{ __('msg.password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" style="    border: 2px solid blue; border-radius: 10px;" type="password" class=" py-2 px-4 rounded-md border-slate-400 focus:border-emerald-500 border-[1.4px] focus:outline-none @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password"  placeholder="{{ __('msg.password') }}" style="border: 2px solid blue; border-radius: 10px;" type="password" class=" py-2 px-4 rounded-md border-slate-400 focus:border-emerald-500 border-[1.4px] focus:outline-none @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -51,17 +51,20 @@
                                     {{ __('msg.btnlog') }}
                                 </button>
 
-                                {{-- @if (Route::has('passwordrequest'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('نسيت كلمة المرور') }}
-                                    </a>
-                                @endif --}}
+
+
                             </div>
+                            <p class="nav-item mt-2 " style="color: blue">
+
+                                <a class="nav-link" href="{{ route('password.request') }}">
+                                    {{ __('msg.forgot') }}
+                                </a>
+                            </p>
                             @if (Route::has('register'))
-                                <p class="nav-item mt-3 " style="color: blue">
+                                <p class="nav-item mt-1" style="color: blue">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('msg.res') }}</a>
                                 </p>
-                            @endif
+                                @endif
                         </div>
                     </form>
                 </div>
