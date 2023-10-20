@@ -12,6 +12,8 @@
         'restmsg'=>'We have emailed your password reset link.',
         'loginnav'=>'Login',
         'register'=>'Register',
+        'crspay' => 'Courses You Have Purchased',
+        'crspay1' => 'Courses',
         'logout'=>'Log out',
         'email'=>'Email',
         'emailvery' => 'Email Confirmation',

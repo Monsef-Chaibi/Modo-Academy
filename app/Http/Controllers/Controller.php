@@ -198,6 +198,19 @@ class Controller extends BaseController
     public function success(){
         $userId = auth()->user()->id;
         Addtocart::where('userid', $userId)->update(['pay' => 1]);
-        return view('success');
+        if(auth()->check())
+        {
+            $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
+            $items=Addtocart::where('userid',auth()->user()->id)->where('pay', 1 )->get();
+            $some=Addtocart::where('userid',auth()->user()->id)->where('pay', 1)->sum('price');
+        }
+        else
+        {     $items= [];
+              $count = 0;
+              $some=0;
+        }
+        $recordcourses = recordcourses::all();
+        $livecourses = Livecourses::all();
+        return view('success')->with('some',$some)->with('count',$count)->with('items',$items)->with('recordcourses',$recordcourses)->with('livecourses',$livecourses);
     }
 }
