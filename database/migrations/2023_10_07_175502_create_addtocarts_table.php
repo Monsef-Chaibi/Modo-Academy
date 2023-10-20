@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('userid');
             $table->string('price');
             $table->string('image');
+            $table->string('pay')->default('0');
         });
     }
 

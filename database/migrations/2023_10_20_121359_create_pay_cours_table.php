@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pay_cours', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('userid');
+            $table->string('price');
+            $table->string('image');
             $table->timestamps();
         });
     }

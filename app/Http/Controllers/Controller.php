@@ -20,7 +20,7 @@ class Controller extends BaseController
         // get number of course in cart
         if(auth()->check())
         {
-            $count = Addtocart::where('userid', auth()->user()->id)->count();
+            $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
         }
         else
         {
@@ -37,7 +37,7 @@ class Controller extends BaseController
           // get number of course in cart
           if(auth()->check())
           {
-              $count = Addtocart::where('userid', auth()->user()->id)->count();
+              $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
           }
           else
           {
@@ -54,7 +54,7 @@ class Controller extends BaseController
           // get number of course in cart
           if(auth()->check())
           {
-              $count = Addtocart::where('userid', auth()->user()->id)->count();
+              $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
           }
           else
           {
@@ -71,7 +71,7 @@ class Controller extends BaseController
           // get number of course in cart
           if(auth()->check())
           {
-              $count = Addtocart::where('userid', auth()->user()->id)->count();
+              $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
           }
           else
           {
@@ -90,7 +90,7 @@ class Controller extends BaseController
           // get number of course in cart
           if(auth()->check())
           {
-              $count = Addtocart::where('userid', auth()->user()->id)->count();
+              $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
           }
           else
           {
@@ -111,9 +111,9 @@ class Controller extends BaseController
           // get number of course in cart
           if(auth()->check())
           {
-              $count = Addtocart::where('userid', auth()->user()->id)->count();
-              $items=Addtocart::where('userid',auth()->user()->id)->get();
-              $some=Addtocart::where('userid',auth()->user()->id)->sum('price');
+              $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
+              $items=Addtocart::where('userid',auth()->user()->id)->where('pay', 0)->get();
+              $some=Addtocart::where('userid',auth()->user()->id)->where('pay', 0)->sum('price');
           }
           else
           {     $items= [];
@@ -132,7 +132,7 @@ class Controller extends BaseController
           // get number of course in cart
           if(auth()->check())
           {
-              $count = Addtocart::where('userid', auth()->user()->id)->count();
+              $count = Addtocart::where('userid', auth()->user()->id)->where('pay', 0)->count();
           }
           else
           {
@@ -171,7 +171,7 @@ class Controller extends BaseController
 
 
     public function StripePost(){
-        $some=Addtocart::where('userid',auth()->user()->id)->sum('price');
+        $some=Addtocart::where('userid',auth()->user()->id)->where('pay', 0)->sum('price');
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         $session = \Stripe\Checkout\Session::create([
             'line_items'  => [
@@ -196,6 +196,8 @@ class Controller extends BaseController
         return redirect()->away($session->url);
     }
     public function success(){
+        $userId = auth()->user()->id;
+        Addtocart::where('userid', $userId)->update(['pay' => 1]);
         return view('success');
     }
 }
