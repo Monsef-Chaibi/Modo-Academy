@@ -9,6 +9,7 @@
         'resetpass'=>'Reset Password',
         'btnreset'=>'Send Password Reset Link',
         'forgot'=>'forgot password',
+        'restmsg'=>'We have emailed your password reset link.',
         'loginnav'=>'Login',
         'register'=>'Register',
         'logout'=>'Log out',
