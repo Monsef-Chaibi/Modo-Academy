@@ -18,6 +18,7 @@
         <script type="module" scr="{{asset('build/assets/app-5c5b5477.js')}}"></script>
 
 
+
     </head>
     <body class=" w-full  font-cairo overflow-x-hidden flex-col relative bg-white flex justify-start items-center">
 
@@ -125,10 +126,10 @@
                    <span class="text-blue-600"> {{$item->price}}</span> {{ __('msg.in2') }}
                 </p>
             </div>
-                    <button style="background-color: rgb(34, 56, 143)" class="icon w-8 h-8 rounded-md text-white">
-                        <i class="fas fa-check-circle"></i>
-
+                    <button style="background-color: rgb(86, 213, 47)" class="icon w-8 h-8 rounded-md text-white">
+                        <i class="fab fa-whatsapp"></i>
                     </button>
+
             </div>
         @endforeach
             <hr

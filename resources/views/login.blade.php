@@ -54,11 +54,14 @@
             <div
             id="menu"
             class="items hidden top-14 {{$pos}}  w-[10rem] text-center  gap-2  absolute p-2 rounded-md min-h-[8rem] bg-white flex-col justify-center items-center text-slate-400 ">
-            <p
+            <a href="/Success">
+                <p
                 class=" rtl px-4 py-2 rounded-md  transition-colors duration-300 ease-out">
                 {{ __('msg.hi') }}
-                  {{ auth()->user()->name }}
-            </p>
+
+                </p>
+            </a>
+
             <hr
             class="w-full"
             >
